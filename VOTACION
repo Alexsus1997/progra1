@@ -1,0 +1,19 @@
+// VOTO : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+void main ()
+{
+	int Edad;
+	cout<<"Ingrese edad del ciudadano ";
+	cin>>Edad;
+	if (Edad>=18)
+	cout<< "Puede Votar";
+	else
+	cout<< "No Puede Votar";
+	getch();
+}
