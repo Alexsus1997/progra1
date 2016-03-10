@@ -1,0 +1,21 @@
+// Salario Neto : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+void main ()
+{
+	float Nombre,Hora,Precio, P;
+	cout<<"Ingresar nombre trabajador ";
+	cin>>Nombre;
+	cout<<"Ingresar Precio Por Hora ";
+	cin>>Precio;
+	cout<<"Ingresar Horas Trabajadas ";
+	cin>>Hora;
+	P=(Hora*Precio)*0.13
+	cout<<"Su salario de; "<<Nombre "es "<<P;
+	getch();
+}
