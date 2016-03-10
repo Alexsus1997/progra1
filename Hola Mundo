@@ -9,6 +9,5 @@ using namespace std;
 void main ()
 {
 	cout<<"Hola Mundo";
-	
 	getch()
 }
