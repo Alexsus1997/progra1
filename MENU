@@ -1,0 +1,49 @@
+// Sueldo.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+using namespace std;
+
+void main ()
+{
+	int opcion;
+	int n,i;
+	float sb,sn;
+	do 
+	cout<<"\t MENU"<<endl;
+	cout <<"1.- Opcion: Salario"<<endl;
+	cout<<"2.- Opcion: Hola Mundo"<<endl;
+	cout<<"ESCOJA UNA OPCION";
+	cin>>opcion;
+	switch (opcion)
+	{
+	case 1: {
+		cout<<"Ingrese Nro de Trabajadores: ";
+		cin>>n;
+		for (i=1;i<=n;i++)
+		{
+			cout<<"Ingresar salario Bruto trabajador "<<i<<endl;
+			cin>>sb;
+			if (sb<=7000)
+				sn=sb-(AFP)*sb;
+			else 
+				sn=sb-(IVA+AFP)*sb;
+			cout<<"El salario neto del trabajador es: "<<sn<<endl;
+		}
+		getch();
+			}
+	case 2: {
+		cout<<"Hola Mundo";
+		getch()
+			}
+	case 3: {
+		cout<<"Salir";break;
+	default: cout<<"Opcion Invalida"<<endl;
+			}
+	} while (opcion != 0);
+
+	getch();
+	}
+}
