@@ -1,0 +1,30 @@
+// Sueldo.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#define IVA 0.13
+#define AFP 0.1271
+using namespace std;
+
+void main ()
+
+{
+	int n,i;
+	float sb,sn;
+	cout<<"Ingrese Nro de Trabajadores: ";
+	cin>>n;
+	for (i=1;i<=n;i++)
+	{
+		cout<<"Ingresar salario Bruto trabajador "<<i<<endl;
+		cin>>sb;
+		if (sb<=7000)
+			sn=sb-(AFP)*sb;
+		else 
+			sn=sb-(IVA+AFP)*sb;
+		cout<<"El salario neto del trabajador es: "<<sn<<endl;
+	}
+	getch();
+getch();
+}
