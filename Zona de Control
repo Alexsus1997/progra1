@@ -1,0 +1,49 @@
+// Zona de Control.cpp
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+
+using namespace std;
+
+void main()
+
+
+{
+	float NP,P1,P2,P3,EF,Promedio,NF;
+	int NR,i;
+	Promedio=0;
+	i=0;
+	cout<<"BIENVENIDO A LA ZONA DE CONTROL"<<endl;
+	cout<<"INGRESE EL NUMERO DE REGISTRO: (-999 PARA TERMINAR)"<<endl;
+	cin>>NR;
+
+
+	while (NR!=-999) 
+	 {
+		cout<<"INGRESE LA NOTA PRACTICA: "<<endl;
+		cin>>NP;
+		cout<<"INGRESE LA NOTA DEL PRIMER PARCIAL: "<<endl;
+		cin>>P1;
+        cout<<"INGRESE LA NOTA DEL SEGUNDO PARCIAL: "<<endl;
+		cin>>P2;
+        cout<<"INGRESE LA NOTA DEL TERCER PARCIAL: "<<endl;
+		cin>>P3;
+		cout<<"INGRESE LA NOTA DEL EXAMEN FINAL: "<<endl;
+		cin>>EF;
+		NF=(NP*0.2)+(((P1+P2+P3)/3)*0.40)+(EF*0.40);
+		system("cls");
+		cout<<"La Nota Final del Estudiante es:"<<endl<<NF;
+		Promedio=Promedio+NF;
+        i++;
+		cout<<endl<<"INGRESE EL NUMERO DE REGISTRO (-999 PARA TERMINAR): "<<endl;
+		cin>>NR;
+		
+
+	  }
+
+	cout<< "EL PROMEDIO FINAL ES: "<<endl;
+	cout<<Promedio/i;
+	getch();
+}
