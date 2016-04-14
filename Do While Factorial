@@ -1,0 +1,28 @@
+#include <iostream>;
+#include "conio.h";
+using namespace std;
+
+void main()
+{
+	double n,i,p=1;
+	cout<<"BIENVENIDO USUARIO"<<endl<<endl<<endl<<endl;
+	do
+	{
+		cout<<"Ingresar numero a sacar su factorial:"<<endl;
+		cin>>n;
+		if (n<0)
+		{
+			cout<<"El numero es invalido, porfavor digite un numero natural: "<<endl;
+			cin>>n;
+		}
+	}
+	while (n<0);
+	{
+		for (i=1;i<=n;i++)
+		{
+			p=p*i;
+		}
+		cout<<"El valor del factorial de: "<<n<<" es: "<<p<<endl<<endl<<"Presione cualquier tecla para salir"<<endl<<endl;
+	}
+	getch();
+}
