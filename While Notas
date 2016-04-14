@@ -1,0 +1,35 @@
+#include "stdafx.h"
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main()
+{
+double pr, p1, p2, p3, ef, promedio = 0, nf;
+int n, i = 0;
+cout << "Ingrese cantidad de estudiantes" << endl;
+cin >> n;
+while (i < n)
+{
+cout << "Ingrese nota de practico:" << endl;
+cin >> pr;
+cout << "Ingrese nota del primer parcial" << endl;
+cin >> p1;
+cout << "Ingrese nota del segundo parcial" << endl;
+cin >> p2;
+cout << "Ingres enota del tercer parcial" << endl;
+cin >> p3;
+cout << "Ingrese nota del examen final" << endl;
+cin >> ef;
+nf = pr * 0.2 + ( (p1+p2+p3)/3 ) * 0.4 + ef * 0.4;
+promedio += nf;
+cout << "La nota final del alumno es: " << nf << endl;
+cout << "Presione cualquier tecla para continuar..." << endl;
+getch();
+system("cls");
+++i;
+}
+cout << endl <<"El promedio final del curso es: " << promedio/n << endl;
+getch();
+return 0;
+}
