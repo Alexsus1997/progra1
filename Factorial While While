@@ -1,0 +1,30 @@
+//
+
+#include "stdafx.h";
+#include <iostream>;
+#include "conio.h";
+using namespace std;
+
+void main()
+{
+	int n,i=0,p=1;
+	cout<<"BIENVENIDO USUARIO"<<endl<<endl<<endl<<endl;
+	do
+	{
+		cout<<"Ingresar numero a sacar su factorial:"<<endl;
+		cin>>n;
+		if (n<0)
+		{
+			cout<<"El numero es invalido, porfavor digite un numero natural: "<<endl;
+		}
+	}
+	while (n<0);
+	
+		while (i<n)
+		{
+			i++;
+			p=p*i;
+		}
+		cout<<"El valor del factorial de: "<<n<<" es: "<<p<<endl<<endl<<"Presione cualquier tecla para salir"<<endl<<endl;
+	getch();
+}
