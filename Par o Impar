@@ -1,0 +1,26 @@
+#include "stdafx.h";
+#include "conio.h";
+#include "math.h";
+#include <iostream>;
+using namespace std;
+
+void main()
+{
+	double nmax;
+	char val='i';
+	do
+	{
+		cout<<"Ingresar exponente IMPAR"<<endl;
+		cin>>nmax; 
+		if((nmax/2)==int(nmax/2))
+		{
+		 cout<<"ERROR, Introdujo numero par"<<endl;
+		}
+		else
+		{
+			val=='p';
+		}
+	}
+	while (val=='p');
+getch();
+}
