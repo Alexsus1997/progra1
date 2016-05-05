@@ -9,10 +9,12 @@ bool numpar(int a);
 void main()
 {
 	bool z;
-	int numero,cantidad,s;
+	double numero,cantidad,s;
+	do
+	{
 	cout<<"Porfavor ingrese cantidad de numeros a calcular"<<endl;
 	cin>>cantidad;
-	for (s=1;s<=cantidad;s++)
+	for (int s=1;s<=cantidad;s++)
 		{
 			cout<<"Porfavor ingrese el numero "<<s<<endl;
 			cin>>numero;
@@ -22,8 +24,10 @@ void main()
 			else 
 				cout<<"EL NUMERO "<<s<<" ES IMPAR"<<endl<<endl;
 		}
-			cout<<"PRESIONE CUALQUIER TECLA PARA SALIR"<<endl;
-getch();
+	}
+	while (cantidad<0);		
+	cout<<"PRESIONE CUALQUIER TECLA PARA SALIR"<<endl;
+	getch();
 }
 bool numpar(int a)
 {
