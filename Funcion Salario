@@ -1,0 +1,36 @@
+#include "stdafx.h";
+#include <iostream>;
+#include "conio.h";
+
+using namespace std;
+
+float salario(float a, float c);
+
+void main()
+{
+	int costo,horas,s,cantidad;
+	cout<<"Ingresar numero de trabajadores"<<endl;
+	cin>>cantidad;
+	do
+	{
+	
+	for (int s=1;s<=cantidad;s++)
+		{
+			cout<<"Porfavor ingrese Costo por Hora del Trabajador "<<s<<endl;
+			cin>>costo;
+			cout<<"Porfavor ingrese Horas trabajadas del Trabajador "<<s<<endl;
+			cin>>horas;
+			float salario=costo*horas;
+			cout<<"El salario del Trabajador "<<s<<" es: "<<salario<<endl<<endl<<endl;
+		}
+	}
+	while (cantidad<0);		
+	cout<<"PRESIONE CUALQUIER TECLA PARA SALIR"<<endl;
+	getch();
+}
+float salario(float a, float b)
+{
+	float s;
+	s=a*b;
+	return s;
+}
