@@ -1,0 +1,28 @@
+#include "stdafx.h";
+#include <iostream>;
+#include "conio.h";
+
+using namespace std;
+
+bool numpar(int a);
+
+void main()
+{
+	bool z;
+	int numero;
+	cout<<"Porfavor ingrese un numero"<<endl;cin>>numero;
+	z=numpar(numero);
+	if (z)
+		cout<<"EL NUMERO ES PAR"<<endl<<endl;
+	else 
+		cout<<"EL NUMERO ES IMPAR"<<endl<<endl;
+	cout<<"PRESIONE CUALQUIER TECLA PARA SALIR";
+getch();
+}
+bool numpar(int a)
+{
+	if (a%2==0)
+		return true;
+	else
+		return false;
+}
