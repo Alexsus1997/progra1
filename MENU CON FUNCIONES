@@ -1,0 +1,138 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include "stdlib.h"
+using namespace std;
+
+float area_cuadrado(float lado);
+float area_rectangulo(float base,float altura);
+float area_circulo(float radio);
+float potencia(float numero, int potencia);
+float MCD(float x1, float x2);
+
+void main()
+{
+	float l,b,h,r,num,p,a1,a2;
+	float cua,rec,cir,pot,mcd;
+	int opcion;
+	cout<<"\t \t MENU"<<endl<<endl<<endl<<endl;
+	cout<<"Opcion 1: Area Cuadrado"<<endl<<"Opcion 2: Area Rectangulo"<<endl<<"Opcion 3: Area Circulo"<<endl;
+	cout<<"Opcion 4: Potencia"<<endl<<"Opcion 5: MCD"<<endl<<"Opcion 0: Salir"<<endl<<endl;
+	system (" color 2F");
+	do
+	{	
+		cout<<"Eliga una opcion (0-5): "<<endl;
+		cin>>opcion;
+		cout<<endl;
+		switch (opcion)
+		{
+			case 1:
+				{ 
+					cout<<"Ingrese valor del lado del cuadrado"<<endl;
+					cin>>l;
+					cua=area_cuadrado(l);
+					cout<<"El area es: "<<cua<<endl<<endl;
+					break;
+				}
+			case 2:
+				{ 
+					cout<<"Ingrese valor del la base del rectangulo"<<endl;
+					cin>>b;
+					cout<<"Ingrese valor del la altura del rectangulo"<<endl;
+					cin>>h;
+					rec=area_rectangulo(b,h);
+					cout<<"El area es: "<<rec<<endl<<endl;
+					break;
+				}
+			case 3:
+				{
+					cout<<"Ingrese valor del radio del circulo"<<endl;
+					cin>>r;
+					cir=area_circulo(r);
+					cout<<"El area es: "<<cir<<endl<<endl;
+					break;
+				}
+			case 4:
+				{
+					cout<<"Ingrese numero"<<endl;
+					cin>>num;
+					cout<<"Ingrese potencia"<<endl;
+					cin>>p;
+					pot=potencia(num,p);
+					cout<<"La Potencia es: "<<pot<<endl<<endl;
+					break;
+				}
+			case 5:
+				{
+					cout<<"Ingrese numero 1"<<endl;
+					cin>>a1;
+					cout<<"Ingrese numero 2"<<endl;
+					cin>>a2;
+					mcd=MCD(a1,a2);
+					cout<<"El MCD de "<<a1<<" y "<<a2<<" es: "<<mcd<<endl<<endl;
+					break;
+				}
+			case 0:
+				{
+					cout<<"PRESIONE CUALQUIER TECLA PARA SALIR"<<endl<<endl;
+					getch();
+				}
+			default:
+				{
+					system ("cls"); 
+					cout<<"ERROR DIGITE DE NUEVO"<<endl<<endl;
+					break;
+				}
+				}
+	}
+	while (opcion!=0);
+	getch;
+}
+	
+float area_cuadrado(float lado)
+{
+	float R;
+	R=lado*lado;
+	return R;
+}
+float area_rectangulo(float base,float altura)
+{
+	float A;
+	A=base*altura;
+	return A;
+}
+float area_circulo(float radio)
+{
+	float C, pi=3.141591;
+	C=pi*radio*radio;
+	return C;
+}
+float potencia(float numero, int potencia)
+{
+	float q=1,i;
+	for (i=1;i<=potencia;i++)
+	{
+		q=q*numero;
+	}
+	return q;
+}
+
+
+float MCD(float x1, float x2)
+{
+	int c;
+	while (x1!=x2)
+	{
+
+	if (x1>x2)
+	{
+		x1=x1-x2;
+	}
+	else
+	{
+		x2=x2-x1;
+	}
+	}
+	c=x1;
+	return c;
+}
